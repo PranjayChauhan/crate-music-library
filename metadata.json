@@ -1,0 +1,6 @@
+{
+  "name": "Crate",
+  "description": "Fast, minimal, ad-free personal music library organizer and player for local files, official exports, and Google Drive.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-deep-twilight: #03045e;
+  --color-french-blue: #023e8a;
+  --color-bright-teal: #0077b6;
+  --color-blue-green: #0096c7;
+  --color-turquoise-surf: #00b4d8;
+  --color-sky-aqua: #48cae4;
+  --color-frosted-blue: #90e0ef;
+  --color-frosted-blue-2: #ade8f4;
+  --color-light-cyan: #caf0f8;
+  --color-accent: #00b4d8;
+  --color-accent-hover: #48cae4;
+  --color-surface-canvas: #020326;
+  --color-surface-card: #03045e;
+  --color-surface-elevated: #023e8a;
+  --color-surface-border: #0077b6;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #020326;
+    color: #caf0f8;
+    font-family: var(--font-sans);
+    letter-spacing: 0.005em;
+    color-scheme: dark;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button,
+  a,
+  select,
+  input {
+    outline-color: #48cae4;
+  }
+}
+
+/* Custom sleek range slider for audio seek bar */
+input[type="range"].crate-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].crate-slider:focus-visible {
+  outline: 2px solid #48cae4;
+  outline-offset: 4px;
+  border-radius: 9999px;
+}
+
+input[type="range"].crate-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+}
+
+input[type="range"].crate-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 9999px;
+  background-color: #caf0f8;
+  border: 2px solid #00b4d8;
+  margin-top: -5px;
+  box-shadow: 0 1px 4px rgba(2, 3, 38, 0.7);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].crate-slider:hover::-webkit-slider-thumb,
+input[type="range"].crate-slider:active::-webkit-slider-thumb {
+  transform: scale(1.18);
+}
+
+input[type="range"].crate-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+}
+
+input[type="range"].crate-slider::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 9999px;
+  background-color: #caf0f8;
+  border: 2px solid #00b4d8;
+  box-shadow: 0 1px 4px rgba(2, 3, 38, 0.7);
+}
+
+/* Safe area helper for mobile PWA / Capacitor */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Subtle dark ocean scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 119, 182, 0.55);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 180, 216, 0.75);
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CRATE</string>
+    <string name="title_activity_main">CRATE</string>
+    <string name="package_name">com.crate.musiclibrary</string>
+    <string name="custom_url_scheme">com.crate.musiclibrary</string>
+</resources>
